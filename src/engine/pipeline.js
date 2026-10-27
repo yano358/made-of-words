@@ -3,7 +3,8 @@ import { createTv } from "./tvShader.js";
 export const SCENE_W = 960;
 export const SCENE_H = 720;
 
-const VISION_BUNDLE = "/lib/vision_bundle.mjs";
+// absolute so Vite's dev server doesn't append ?import, which it refuses for files in public/
+const VISION_BUNDLE = new URL("/lib/vision_bundle.mjs", location.origin).href;
 const BARS = ["#c0c0c0", "#c0c000", "#00c0c0", "#00c000", "#c000c0", "#c00000", "#0000c0"];
 const FINGERTIPS = [4, 8, 12, 16, 20];
 const join = (chunks) => {
