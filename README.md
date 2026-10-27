@@ -13,7 +13,7 @@ Everything runs locally and offline after a one-time download. Your camera and v
 ```bash
 npm install
 npm run fetch-assets   # one-time download of the models and libraries (~107 MB, git-ignored)
-npm run dev            # http://localhost:8787
+npm run build && npm run preview            # http://localhost:8787
 ```
 
 Press **Power** and allow camera and microphone access. Speech recognition needs about 30 s to warm up the first time.
